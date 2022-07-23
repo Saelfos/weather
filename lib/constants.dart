@@ -12,11 +12,11 @@ import 'controllers/remote_service.dart';
 //Main light theme
 final light = SystemUiOverlayStyle(
   statusBarColor:
-  Colors.cyan.shade100,
+  Colors.white,
   statusBarIconBrightness:
   Brightness.dark ,
   systemNavigationBarColor:
-  Colors.cyan.shade100 ,
+  Colors.white,
   systemNavigationBarIconBrightness:
   Brightness.dark ,
 );

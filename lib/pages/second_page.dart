@@ -23,11 +23,11 @@ double wind;
     return SafeArea(
         child: Scaffold(
             backgroundColor: brightness == Brightness.light
-                ? Colors.cyan.shade100
+                ? Colors.white
                 : Colors.grey.shade900,
             appBar: AppBar(
               backgroundColor: brightness == Brightness.light
-                  ? Colors.cyan.shade100
+                  ? Colors.white
                   : Colors.grey.shade900,
               title: Text(DateFormat('EEEE')
                   .format(DateTime.now().add(Duration(days: dayIndex)))),
@@ -67,7 +67,7 @@ double wind;
                         width: size.width * 0.26,
                         child: Card(
                           color: brightness == Brightness.light
-                              ? Colors.cyan.shade200
+                              ? Colors.cyan.shade100
                               : Colors.grey.shade800,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -144,7 +144,7 @@ double wind;
                   width: size.width*0.25,
                   child: Card(
                     color: brightness == Brightness.light
-                        ? Colors.cyan.shade200
+                        ? Colors.cyan.shade100
                         : Colors.grey.shade800,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -162,7 +162,7 @@ double wind;
                   width: size.width*0.25,
                   child: Card(
                     color: brightness == Brightness.light
-                        ? Colors.cyan.shade200
+                        ? Colors.cyan.shade100
                         : Colors.grey.shade800,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

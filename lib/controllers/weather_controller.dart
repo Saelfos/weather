@@ -9,7 +9,7 @@ import '../constants.dart';
 
 class WeatherController extends GetxController {
   static WeatherController instance= Get.find();
-RxBool isLoading=true.obs;
+var isLoading=true.obs;
 
 
 
