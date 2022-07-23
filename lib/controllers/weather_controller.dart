@@ -9,7 +9,7 @@ import '../constants.dart';
 
 class WeatherController extends GetxController {
   static WeatherController instance= Get.find();
-var isLoading=true.obs;
+RxBool isLoading=false.obs;
 
 
 
@@ -18,6 +18,7 @@ var isLoading=true.obs;
     super.onReady();
     getWeather();
   }
+
   Welcome weather;
   //Filtering data to multiple lists for ease of use
 List <ListElement> singleRead;
@@ -32,8 +33,8 @@ List <ListElement> fifthDay;
       var weatherResponse = await RemoteService.getWeather();
       if (weatherResponse != null) {
          weather=weatherResponse;
-         isLoading.value=false;
-
+         isLoading.value=true;
+update();
          // SingleDayResponse
          List<ListElement> singleResponse=weatherController.weather.list.where((e) =>
              e.dtTxt.toString().contains('12:00:00')).toList();

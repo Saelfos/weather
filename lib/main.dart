@@ -5,11 +5,11 @@ import 'package:weather/pages/first_page.dart';
 import 'controllers/weather_controller.dart';
 
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  runApp( const MyApp());
   WidgetsFlutterBinding.ensureInitialized();
   //Injecting GetX Controller
-  Get.put(WeatherController());
+
 }
 
 

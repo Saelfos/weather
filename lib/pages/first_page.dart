@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:weather/pages/second_page.dart';
 import '../constants.dart';
+import '../controllers/weather_controller.dart';
 
 class FirstPage extends StatelessWidget {
   FirstPage({
@@ -15,6 +16,7 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Get The Brightness of the device
+    Get.put(WeatherController());
     var brightness = MediaQuery.of(context).platformBrightness;
     // Get physical Width and height of device
     final Size size = MediaQuery.of(context).size;
@@ -32,13 +34,13 @@ class FirstPage extends StatelessWidget {
           backgroundColor: brightness == Brightness.light
               ? Colors.white
               : Colors.grey.shade900,
-          title: const Text('Weather Forcast'),
+          title: const Text('Weather Forecast'),
         ),
         body:
-            // Obxto update widget dynamically
+            // Obx to update widget dynamically
             Obx(() => Center(
-                child: weatherController.isLoading==true //Loading circle progress bar
-                    ? CircularProgressIndicator()
+                child: weatherController.isLoading.value==false //Loading circle progress bar
+                    ? const CircularProgressIndicator()
                     : Column(
                         children: [
                           SizedBox(
