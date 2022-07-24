@@ -9,7 +9,7 @@ void main() async{
   runApp( const MyApp());
   WidgetsFlutterBinding.ensureInitialized();
   //Injecting GetX Controller
-
+  Get.put(WeatherController());
 }
 
 

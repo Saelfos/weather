@@ -34,7 +34,6 @@ List <ListElement> fifthDay;
       if (weatherResponse != null) {
          weather=weatherResponse;
          isLoading.value=true;
-update();
          // SingleDayResponse
          List<ListElement> singleResponse=weatherController.weather.list.where((e) =>
              e.dtTxt.toString().contains('12:00:00')).toList();
@@ -75,54 +74,3 @@ update();
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import 'dart:convert';
-//
-// import 'package:flutter/material.dart';
-//
-// import 'package:get/get.dart';
-// import 'package:weather/controllers/remote_service.dart';
-// import 'package:weather/models/weather_model.dart';
-// import 'package:http/http.dart' as http;
-//
-// class WeatherController extends GetxController{
-//   var meals = WeatherModel().obs;
-// var weatherModel;
-//   Future<WeatherModel> getWeather() async {
-//
-//     var response = await http.get(Uri.parse(
-//         'http://api.openweathermap.org/data/2.5/forecast?id=292223&appid=dc55eb32e9a3307811cede2cd38ec4e3'));
-//
-//     print(response.body);
-//
-//     final json = jsonDecode(response.body);
-//    meals.value=json;
-//     return WeatherModel.fromJson(json);
-//   }
-//
-//
-//   @override
-//   void onReady() {
-//     super.onReady();
-//     getWeather();
-//
-//   }
-//
-//
-// }

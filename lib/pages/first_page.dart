@@ -16,7 +16,6 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Get The Brightness of the device
-    Get.put(WeatherController());
     var brightness = MediaQuery.of(context).platformBrightness;
     // Get physical Width and height of device
     final Size size = MediaQuery.of(context).size;
