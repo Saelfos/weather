@@ -8,7 +8,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:weather/controllers/weather_controller.dart';
 
-import 'controllers/remote_service.dart';
 //Main light theme
 final light = SystemUiOverlayStyle(
   statusBarColor:
@@ -35,3 +34,5 @@ final dark = SystemUiOverlayStyle(
 
 //App's main GetX Controller
 WeatherController weatherController = Get.put(WeatherController());
+
+// Proof that it is my app :Essam Madanli
